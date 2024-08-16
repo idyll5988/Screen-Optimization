@@ -4,7 +4,7 @@ POSTFSDATA=true
 LATESTARTSERVICE=true
 cd $MODPATH
 StopInstalling() {
-  rm -rf "/data/adb/modules/Thermals"
+  rm -rf "/data/adb/modules/Screen"
   exit 1
 }
 if [ "$BOOTMODE" ] && [ "$KSU" ]; then
@@ -32,8 +32,8 @@ fi
 if [ ! -d "${service_dir}" ]; then
   mkdir -p "${service_dir}"
 fi
-if [ -d "/data/adb/modules/Thermals" ]; then
-  rm -rf "/data/adb/modules/Thermals"
+if [ -d "/data/adb/modules/Screen" ]; then
+  rm -rf "/data/adb/modules/Screen"
   ui_print "▌*已删除旧模块"
 fi
 EXTRACT() {
